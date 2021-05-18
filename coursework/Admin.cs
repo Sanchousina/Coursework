@@ -12,7 +12,7 @@ namespace coursework
         public List<Film> films;
         public List<User> users;
 
-        public string Search(string nickname, string password)
+        public void Search(string nickname, string password, out User user, out string res)
         {
             for (int i = 0; i < users.Count; i++)
             {
@@ -20,15 +20,20 @@ namespace coursework
                 {
                     if (users[i].password == password)
                     {
-                        return "found";
+                        user = users[i];
+                        res = "found";
+                        return;
                     }
                     else
                     {
-                        return "wrong password";
+                        user = users[i];
+                        res = "wrong password";
+                        return;
                     }
                 }
             }
-            return "not found";
+            res = "not found";
+            user = null;
         }
 
         public bool CheckAdmin(string nickname, string password)

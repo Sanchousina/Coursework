@@ -11,8 +11,8 @@ namespace coursework
     {
         Add_film add;
         UserPage user_page;
-        
-        public Main()
+    
+        public Main(User user = null)
         {
             InitializeComponent();
 
@@ -23,7 +23,7 @@ namespace coursework
             LoadCatalog(Login.admin.films) ;
             
             add = new Add_film();
-            user_page = new UserPage();
+            user_page = new UserPage(user);
 
             if (Login.IsItAdmin == false)
             {

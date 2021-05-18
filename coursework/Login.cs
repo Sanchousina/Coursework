@@ -11,6 +11,7 @@ namespace coursework
     {
         public static Admin admin;
         Main main;
+        User user;
 
         public static bool IsItAdmin;
         public Login()
@@ -105,12 +106,15 @@ namespace coursework
                 }
                 else
                 {
-                    string res = admin.Search(nickname, password);
-                    if (res == "found")
+                    
+                    string res;
+                    admin.Search(nickname, password, out user, out res);
+
+                    if (res == "found" && user != null)
                     {
                         IsItAdmin = false;
                         this.Hide();
-                        main = new Main();
+                        main = new Main(user);
                         main.Show();
                     }
                     else if (res == "wrong password")
@@ -122,7 +126,7 @@ namespace coursework
                             MessageBoxIcon.Error
                             );
                     }
-                    else if (res == "not found")
+                    else if (res == "not found" && user == null)
                     {
                         MessageBox.Show(
                             "This account does not exist. Please, register",

@@ -10,9 +10,14 @@ namespace coursework
 {
     public partial class UserPage : Form
     {
-        public UserPage()
+        User user;
+        public UserPage(User u)
         {
             InitializeComponent();
+
+            user = u;
+
+            label1.Text = "Hello Dear " + user.nickname;
         }
     }
 }
