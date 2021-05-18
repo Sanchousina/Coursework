@@ -10,8 +10,12 @@ namespace coursework
 {
     public partial class FilmPage : Form
     {
-        public FilmPage(Film film)
+        Main main;
+        Film film;
+        public FilmPage(Film f)
         {
+            film = f;
+
             InitializeComponent();
 
             if (Login.IsItAdmin == false)
@@ -52,6 +56,33 @@ namespace coursework
         private void FilmPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            main = new Main();
+            main.Show();
+        }
+
+        private void DeleteFilm_Click(object sender, EventArgs e)
+        {
+            film.Delete(Login.admin.films);
+            MessageBox.Show(
+                    "The film was successfully deleted",
+                    "Film is deleted",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            this.Hide();
+            main = new Main();
+            main.Show();
+        }
+
+        private void ChangeInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_film change = new Add_film(film);
+            change.Show();
         }
     }
 }

@@ -82,17 +82,16 @@ namespace coursework
             // descriptionField
             // 
             this.descriptionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.descriptionField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.descriptionField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionField.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionField.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.descriptionField.HideSelection = false;
             this.descriptionField.Location = new System.Drawing.Point(23, 350);
             this.descriptionField.Multiline = true;
             this.descriptionField.Name = "descriptionField";
             this.descriptionField.Size = new System.Drawing.Size(456, 196);
             this.descriptionField.TabIndex = 2;
+            this.descriptionField.TabStop = false;
             this.descriptionField.Text = "description";
-            this.descriptionField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -152,7 +151,7 @@ namespace coursework
             // castField
             // 
             this.castField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.castField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.castField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.castField.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.castField.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.castField.Location = new System.Drawing.Point(269, 269);
@@ -160,6 +159,7 @@ namespace coursework
             this.castField.Name = "castField";
             this.castField.Size = new System.Drawing.Size(210, 64);
             this.castField.TabIndex = 8;
+            this.castField.TabStop = false;
             this.castField.Text = "cast";
             // 
             // year
@@ -255,6 +255,7 @@ namespace coursework
             this.DeleteFilm.TabIndex = 49;
             this.DeleteFilm.Text = "Delete film";
             this.DeleteFilm.UseVisualStyleBackColor = false;
+            this.DeleteFilm.Click += new System.EventHandler(this.DeleteFilm_Click);
             // 
             // ChangeInfo
             // 
@@ -271,6 +272,7 @@ namespace coursework
             this.ChangeInfo.TabIndex = 50;
             this.ChangeInfo.Text = "Change info";
             this.ChangeInfo.UseVisualStyleBackColor = false;
+            this.ChangeInfo.Click += new System.EventHandler(this.ChangeInfo_Click);
             // 
             // pictureBox1
             // 
@@ -317,6 +319,7 @@ namespace coursework
             this.Back.TabIndex = 54;
             this.Back.Text = "Back to catalog";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // FilmPage
             // 

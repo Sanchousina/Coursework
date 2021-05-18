@@ -52,10 +52,13 @@ namespace coursework
             this.panel2 = new System.Windows.Forms.Panel();
             this.add_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.saveChanges = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.releaseYear)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -309,7 +312,7 @@ namespace coursework
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.panel2.Controls.Add(this.add_button);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -322,13 +325,14 @@ namespace coursework
             this.add_button.AutoSize = true;
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_button.Dock = System.Windows.Forms.DockStyle.Right;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.add_button.ForeColor = System.Drawing.Color.White;
-            this.add_button.Location = new System.Drawing.Point(594, 9);
+            this.add_button.Location = new System.Drawing.Point(173, 0);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(126, 31);
+            this.add_button.Size = new System.Drawing.Size(126, 38);
             this.add_button.TabIndex = 4;
             this.add_button.Text = "add new film";
             this.add_button.UseVisualStyleBackColor = false;
@@ -345,6 +349,33 @@ namespace coursework
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin panel";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.saveChanges);
+            this.panel3.Controls.Add(this.add_button);
+            this.panel3.Location = new System.Drawing.Point(421, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(299, 38);
+            this.panel3.TabIndex = 1;
+            // 
+            // saveChanges
+            // 
+            this.saveChanges.AutoSize = true;
+            this.saveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.saveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveChanges.Dock = System.Windows.Forms.DockStyle.Right;
+            this.saveChanges.FlatAppearance.BorderSize = 0;
+            this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChanges.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveChanges.ForeColor = System.Drawing.Color.White;
+            this.saveChanges.Location = new System.Drawing.Point(47, 0);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(126, 38);
+            this.saveChanges.TabIndex = 5;
+            this.saveChanges.Text = "save changes";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
+            // 
             // Add_film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -359,6 +390,8 @@ namespace coursework
             ((System.ComponentModel.ISupportInitialize)(this.releaseYear)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -389,5 +422,7 @@ namespace coursework
         private System.Windows.Forms.Button onloadPoster;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button saveChanges;
     }
 }

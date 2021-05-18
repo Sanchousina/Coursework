@@ -11,9 +11,40 @@ namespace coursework
     public partial class Add_film : Form
     {
         Main main;
-        public Add_film()
+        Film film;
+        public Add_film(Film f = null)
         {
             InitializeComponent();
+
+            if(f != null)
+            {
+                film = f;
+
+                filmNameField.Text = film.film_name;
+                releaseYear.Value = Convert.ToInt32(film.year);
+                countryField.Text = film.country;
+                directorField.Text = film.director;
+                genreField.Text = film.genre;
+                castField.Text = film.cast;
+                descriptionField.Text = film.description;
+                picture.Image = ConvertImg.Base64ToImage(film.poster);
+
+                if(film.age_limit == true)
+                {
+                    age_limit18.Checked = true;
+                }
+                else
+                {
+                    age_limit_none.Checked = true;
+                }
+
+                add_button.Visible = false;
+                onloadPoster.Visible = false;
+            }
+            else
+            {
+                saveChanges.Visible = false;
+            }          
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -82,6 +113,37 @@ namespace coursework
             this.Hide();
             main = new Main();
             main.Show();
+        }
+
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            film.film_name = filmNameField.Text;
+            film.year = releaseYear.Value.ToString();
+            film.country = countryField.Text;
+            film.director = directorField.Text;
+            film.genre = genreField.Text;
+            film.cast = castField.Text;
+            film.description = descriptionField.Text;
+            //film.poster = ConvertImg.ImageToBase64(picture.Image, ImageFormat.Bmp);
+            if (age_limit18.Checked)
+            {
+                film.age_limit = true;
+            }
+            else if(age_limit_none.Checked)
+            {
+                film.age_limit = false;
+            }
+
+            MessageBox.Show(
+                            "The changes are saved",
+                            "Updated info",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                            );
+
+            this.Hide();
+            FilmPage update = new FilmPage(film);
+            update.Show();
         }
     }
 }

@@ -76,14 +76,6 @@ namespace coursework
                 float currentSize = title.Font.SizeInPoints;
                 currentSize += 3;
 
-                /*Label l = new Label();
-                l.Location = new Point(x , y + p.Height + 10);
-                l.Text = films[i].film_name;
-                
-                l.ForeColor = Color.WhiteSmoke;
-                float currentSize = l.Font.SizeInPoints;
-                currentSize += 3; */
-
                 catalog.Controls.Add(p);
                 catalog.Controls.Add(title);
 

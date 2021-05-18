@@ -46,5 +46,10 @@ namespace coursework
             }
             return res;
        }
+
+        public void Delete(List<Film> films)
+        {
+            films.Remove(this);
+        }
     }
 }
