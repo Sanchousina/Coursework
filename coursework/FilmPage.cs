@@ -1,9 +1,8 @@
 ﻿using System;
+using System.IO;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace coursework
@@ -68,6 +67,8 @@ namespace coursework
         private void DeleteFilm_Click(object sender, EventArgs e)
         {
             film.Delete(Login.admin.films);
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
+
             MessageBox.Show(
                     "The film was successfully deleted",
                     "Film is deleted",

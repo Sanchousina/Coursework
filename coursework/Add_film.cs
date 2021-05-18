@@ -101,7 +101,9 @@ namespace coursework
             string poster = ConvertImg.ImageToBase64(picture.Image, ImageFormat.Bmp);
             
             Film film = new Film(name, year, genre, country, director, age_limit, description, cast, poster);
-            Serializer.Serialize("films.json", film);
+            Login.admin.films.Add(film);
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
+            //Serializer.Serialize("films.json", film);
 
             MessageBox.Show(
                             "The movie was added successfully",
@@ -124,7 +126,8 @@ namespace coursework
             film.genre = genreField.Text;
             film.cast = castField.Text;
             film.description = descriptionField.Text;
-            //film.poster = ConvertImg.ImageToBase64(picture.Image, ImageFormat.Bmp);
+            //string poster = ConvertImg.ImageToBase64(picture.Image, ImageFormat.Bmp);
+            //film.poster = poster;
             if (age_limit18.Checked)
             {
                 film.age_limit = true;
@@ -133,6 +136,8 @@ namespace coursework
             {
                 film.age_limit = false;
             }
+
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
 
             MessageBox.Show(
                             "The changes are saved",

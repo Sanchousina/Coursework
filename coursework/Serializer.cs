@@ -19,8 +19,9 @@ namespace coursework
                     break;
                 }
                 JsonSerializer serializer = new JsonSerializer();
-                Film newFilm = serializer.Deserialize<Film>(reader);
-                Login.admin.films.Add(newFilm);
+                Login.admin.films = serializer.Deserialize<List<Film>>(reader);
+                /*Film newFilm = serializer.Deserialize<Film>(reader);
+                Login.admin.films.Add(newFilm);*/
             }
             reader.Close();
         }
