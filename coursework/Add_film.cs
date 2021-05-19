@@ -10,15 +10,16 @@ namespace coursework
 {
     public partial class Add_film : Form
     {
+        Admin admin;
         Main main;
         Film film;
-        public Add_film(Film f = null)
+        List<Film> films;
+        public Add_film(Film film, Admin admin)             //изменение информации о фильме
         {
             InitializeComponent();
 
-            if(f != null)
-            {
-                film = f;
+            this.film = film;
+            this.admin = admin;
 
                 filmNameField.Text = film.film_name;
                 releaseYear.Value = Convert.ToInt32(film.year);
@@ -40,11 +41,16 @@ namespace coursework
 
                 add_button.Visible = false;
                 onloadPoster.Visible = false;
-            }
-            else
-            {
-                saveChanges.Visible = false;
-            }          
+        }
+
+        public Add_film(List<Film> films, Admin admin)
+        {
+            this.films = films;
+            this.admin = admin;
+            InitializeComponent();
+
+            saveChanges.Visible = false;
+
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -101,8 +107,8 @@ namespace coursework
             string poster = ConvertImg.ImageToBase64(picture.Image, ImageFormat.Bmp);
             
             Film film = new Film(name, year, genre, country, director, age_limit, description, cast, poster);
-            Login.admin.films.Add(film);
-            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
+            films.Add(film);
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(films));
             //Serializer.Serialize("films.json", film);
 
             MessageBox.Show(
@@ -113,7 +119,7 @@ namespace coursework
                             );
 
             this.Hide();
-            main = new Main();
+            main = new Main(admin);
             main.Show();
         }
 
@@ -137,7 +143,7 @@ namespace coursework
                 film.age_limit = false;
             }
 
-            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(films));
 
             MessageBox.Show(
                             "The changes are saved",
@@ -147,7 +153,7 @@ namespace coursework
                             );
 
             this.Hide();
-            FilmPage update = new FilmPage(film);
+            FilmPage update = new FilmPage(film, films, admin);
             update.Show();
         }
     }

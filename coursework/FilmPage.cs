@@ -12,18 +12,22 @@ namespace coursework
         Main main;
         Film film;
         User user;
-        public FilmPage(Film f, User u = null)
+        Admin admin;
+        List<Film> films;
+        public FilmPage(Film f, User u)
         {
             film = f;
             user = u;
 
             InitializeComponent();
 
-            if (Login.IsItAdmin == false)
-            {
-                DeleteFilm.Visible = false;
-                ChangeInfo.Visible = false;
-            }
+            /* if (Login.IsItAdmin == false)
+             {
+                 DeleteFilm.Visible = false;
+                 ChangeInfo.Visible = false;
+             }*/
+            DeleteFilm.Visible = false;
+            ChangeInfo.Visible = false;
 
             title.Text = film.film_name;
             poster.Image = ConvertImg.Base64ToImage(film.poster);
@@ -37,11 +41,38 @@ namespace coursework
             if(film.age_limit == true)
             {
                 age_limit.Text = "18+";
-                if(user != null && user.age < 18)
+                if(user.age < 18)
                 {
                     //link.Cursor = Cursors.No;     //почему не меняется?
                     link.Enabled = false;
                 }
+            }
+            else
+            {
+                age_limit.Text = "none";
+            }
+        }
+
+        public FilmPage(Film f,List<Film> films, Admin a)
+        {
+            this.films = films;
+            film = f;
+            admin = a;
+
+            InitializeComponent();
+
+            title.Text = film.film_name;
+            poster.Image = ConvertImg.Base64ToImage(film.poster);
+            descriptionField.Text = film.description;
+            year.Text = film.year;
+            country.Text = film.country;
+            director.Text = film.director;
+            genre.Text = film.genre;
+            castField.Text = film.cast;
+
+            if (film.age_limit == true)
+            {
+                age_limit.Text = "18+";
             }
             else
             {
@@ -73,8 +104,8 @@ namespace coursework
 
         private void DeleteFilm_Click(object sender, EventArgs e)
         {
-            film.Delete(Login.admin.films);
-            File.WriteAllText("films.json", JsonConvert.SerializeObject(Login.admin.films));
+            film.Delete(films);
+            File.WriteAllText("films.json", JsonConvert.SerializeObject(films));
 
             MessageBox.Show(
                     "The film was successfully deleted",
@@ -82,14 +113,14 @@ namespace coursework
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             this.Hide();
-            main = new Main();
+            main = new Main(admin);
             main.Show();
         }
 
         private void ChangeInfo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add_film change = new Add_film(film);
+            Add_film change = new Add_film(film, admin);
             change.Show();
         }
 

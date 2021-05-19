@@ -9,7 +9,7 @@ namespace coursework
         private string admin_name = "admin";
         private string admin_password = "password";
 
-        public List<Film> films;
+        //public List<Film> films;
         public List<User> users;
 
         public void Search(string nickname, string password, out User user, out string res)

@@ -9,40 +9,55 @@ namespace coursework
 {
     public partial class Main : Form
     {
+        FilmCollection collection;
         Add_film add;
         UserPage user_page;
+        FilmPage film_page;
         User user;
+        Admin admin;
     
-        public Main(User u = null)
+        public Main(User u)
         {
-            if(u != null)
-            {
-                user = u;
-                user_page = new UserPage(user);
-            }
+            user = u;
+            user_page = new UserPage(user);
             
+            InitializeComponent();
+
+            //Login.admin.films = new List<Film>();
+            collection = new FilmCollection();          
+            Serializer.DeserealizeFilms(collection.films);
+            LoadCatalog(collection) ;          
+
+            /*if (Login.IsItAdmin == false)
+            {
+                AddFilm.Visible = false;
+            }*/
+
+            AddFilm.Visible = false;
+        }
+
+        public Main(Admin a)
+        {
+            admin = a;
 
             InitializeComponent();
 
-            Login.admin.films = new List<Film>();
-           
-            Serializer.DeserealizeFilms();
-
-            LoadCatalog(Login.admin.films) ;
-            
-            add = new Add_film();
-            
-            if (Login.IsItAdmin == false)
-            {
-                AddFilm.Visible = false;
-            }
+            add = new Add_film(collection.films, admin);
         }
 
         private void Poster_Click1(object sender, EventArgs e)
         {
             this.Hide();
             PictureBox poster = (PictureBox)sender;
-            FilmPage film_page = new FilmPage(Film.Search(Login.admin.films, poster.Name), user);
+            //FilmPage film_page = new FilmPage(Film.Search(collection.films, poster.Name), user);
+            if (admin == null)
+            {
+                film_page = new FilmPage(Film.Search(collection.films, poster.Name), user);
+            }
+            else if(user == null)
+            {
+                film_page = new FilmPage(Film.Search(collection.films, poster.Name),collection.films, admin);
+            }         
             film_page.Show();
         }
 
@@ -51,12 +66,12 @@ namespace coursework
             Application.Exit();
         }
 
-        private void LoadCatalog(List<Film> films)
+        private void LoadCatalog(FilmCollection films)
         {
             PictureBox p;
             int x = 40;
             int y = 40;
-            for(int i = 0; i < films.Count; i++)
+            for(int i = 0; i < collection.films.Count; i++)
             {
                 if(x == 700)
                 {
@@ -64,10 +79,10 @@ namespace coursework
                     y = y + 200 + 60;
                 }
                 p = new PictureBox();
-                p.Name = films[i].film_name;
+                p.Name = collection.films[i].film_name;
                 p.Location = new Point(x,y);
                 p.Size = new Size(180, 200);
-                p.Image = ConvertImg.Base64ToImage(films[i].poster);
+                p.Image = ConvertImg.Base64ToImage(collection.films[i].poster);
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
                 p.Cursor = Cursors.Hand;
                 p.Click += Poster_Click1;
@@ -76,7 +91,7 @@ namespace coursework
                 title.Location = new Point(x, y + p.Height + 10);
                 title.Multiline = true;
                 title.Size = new Size(180, 25);
-                title.Text = films[i].film_name;
+                title.Text = collection.films[i].film_name;
                 title.BackColor = catalog.BackColor;
                 title.BorderStyle = BorderStyle.None;
                 title.ForeColor = Color.WhiteSmoke;

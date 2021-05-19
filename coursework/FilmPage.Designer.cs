@@ -347,7 +347,10 @@ namespace coursework
             this.Controls.Add(this.label2);
             this.Controls.Add(this.descriptionField);
             this.Controls.Add(this.poster);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(823, 602);
             this.Name = "FilmPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FilmPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FilmPage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.poster)).EndInit();

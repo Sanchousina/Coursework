@@ -9,11 +9,12 @@ namespace coursework
 {
     public partial class Login : Form
     {
-        public static Admin admin;
+        //public static Admin admin;
+        Admin admin;
         Main main;
         User user;
 
-        public static bool IsItAdmin;
+       // public static bool IsItAdmin;
         public Login()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace coursework
             admin = new Admin();
 
             admin.users = new List<User>();
-            Serializer.DeserealizeUsers();
+            Serializer.DeserealizeUsers(admin.users);
             
             nameField.Text = "nickname";
             nameField.ForeColor = Color.Gray;
@@ -98,9 +99,9 @@ namespace coursework
                 {
                     if(admin.CheckAdmin(nickname, password))
                     {
-                        IsItAdmin = true;
+                        //IsItAdmin = true;
                         this.Hide();
-                        main = new Main();
+                        main = new Main(admin);
                         main.Show();
                     }
                 }
@@ -112,7 +113,7 @@ namespace coursework
 
                     if (res == "found" && user != null)
                     {
-                        IsItAdmin = false;
+                        //IsItAdmin = false;
                         this.Hide();
                         main = new Main(user);
                         main.Show();
