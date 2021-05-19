@@ -11,9 +11,11 @@ namespace coursework
     {
         Main main;
         Film film;
-        public FilmPage(Film f)
+        User user;
+        public FilmPage(Film f, User u = null)
         {
             film = f;
+            user = u;
 
             InitializeComponent();
 
@@ -35,6 +37,11 @@ namespace coursework
             if(film.age_limit == true)
             {
                 age_limit.Text = "18+";
+                if(user != null && user.age < 18)
+                {
+                    //link.Cursor = Cursors.No;     //почему не меняется?
+                    link.Enabled = false;
+                }
             }
             else
             {
@@ -60,7 +67,7 @@ namespace coursework
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            main = new Main();
+            main = new Main(user);
             main.Show();
         }
 
@@ -84,6 +91,12 @@ namespace coursework
             this.Hide();
             Add_film change = new Add_film(film);
             change.Show();
+        }
+
+        private void link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Link l = new Link();
+            l.Show();
         }
     }
 }

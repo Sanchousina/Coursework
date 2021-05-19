@@ -11,9 +11,17 @@ namespace coursework
     {
         Add_film add;
         UserPage user_page;
+        User user;
     
-        public Main(User user = null)
+        public Main(User u = null)
         {
+            if(u != null)
+            {
+                user = u;
+                user_page = new UserPage(user);
+            }
+            
+
             InitializeComponent();
 
             Login.admin.films = new List<Film>();
@@ -23,8 +31,7 @@ namespace coursework
             LoadCatalog(Login.admin.films) ;
             
             add = new Add_film();
-            user_page = new UserPage(user);
-
+            
             if (Login.IsItAdmin == false)
             {
                 AddFilm.Visible = false;
@@ -35,7 +42,7 @@ namespace coursework
         {
             this.Hide();
             PictureBox poster = (PictureBox)sender;
-            FilmPage film_page = new FilmPage(Film.Search(Login.admin.films, poster.Name));
+            FilmPage film_page = new FilmPage(Film.Search(Login.admin.films, poster.Name), user);
             film_page.Show();
         }
 

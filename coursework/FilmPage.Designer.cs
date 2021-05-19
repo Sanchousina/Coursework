@@ -231,6 +231,7 @@ namespace coursework
             // link
             // 
             this.link.AutoSize = true;
+            this.link.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.link.LinkColor = System.Drawing.Color.WhiteSmoke;
             this.link.Location = new System.Drawing.Point(566, 68);
@@ -239,6 +240,7 @@ namespace coursework
             this.link.TabIndex = 15;
             this.link.TabStop = true;
             this.link.Text = "Watch film now!";
+            this.link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_LinkClicked);
             // 
             // DeleteFilm
             // 

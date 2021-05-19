@@ -21,3 +21,4 @@ F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.Add_film.resources
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.UserPage.resources
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.FilmPage.resources
+F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.Link.resources
