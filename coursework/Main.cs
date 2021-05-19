@@ -25,8 +25,8 @@ namespace coursework
 
             //Login.admin.films = new List<Film>();
             collection = new FilmCollection();          
-            Serializer.DeserealizeFilms(collection.films);
-            LoadCatalog(collection) ;          
+            Serializer.DeserealizeFilms(collection);
+            LoadCatalog(collection.films) ;          
 
             /*if (Login.IsItAdmin == false)
             {
@@ -42,7 +42,11 @@ namespace coursework
 
             InitializeComponent();
 
-            add = new Add_film(collection.films, admin);
+            collection = new FilmCollection();
+            Serializer.DeserealizeFilms(collection);
+            LoadCatalog(collection.films);
+
+            add = new Add_film(collection, admin);
         }
 
         private void Poster_Click1(object sender, EventArgs e)
@@ -66,12 +70,12 @@ namespace coursework
             Application.Exit();
         }
 
-        private void LoadCatalog(FilmCollection films)
+        private void LoadCatalog(List<Film> films)
         {
             PictureBox p;
             int x = 40;
             int y = 40;
-            for(int i = 0; i < collection.films.Count; i++)
+            for(int i = 0; i < films.Count; i++)
             {
                 if(x == 700)
                 {
@@ -79,10 +83,10 @@ namespace coursework
                     y = y + 200 + 60;
                 }
                 p = new PictureBox();
-                p.Name = collection.films[i].film_name;
+                p.Name = films[i].film_name;
                 p.Location = new Point(x,y);
                 p.Size = new Size(180, 200);
-                p.Image = ConvertImg.Base64ToImage(collection.films[i].poster);
+                p.Image = ConvertImg.Base64ToImage(films[i].poster);
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
                 p.Cursor = Cursors.Hand;
                 p.Click += Poster_Click1;
@@ -91,7 +95,7 @@ namespace coursework
                 title.Location = new Point(x, y + p.Height + 10);
                 title.Multiline = true;
                 title.Size = new Size(180, 25);
-                title.Text = collection.films[i].film_name;
+                title.Text = films[i].film_name;
                 title.BackColor = catalog.BackColor;
                 title.BorderStyle = BorderStyle.None;
                 title.ForeColor = Color.WhiteSmoke;

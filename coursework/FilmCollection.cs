@@ -4,7 +4,7 @@ using System.Text;
 
 namespace coursework
 {
-    class FilmCollection
+    public class FilmCollection
     {
         public List<Film> films { get; set; }
 

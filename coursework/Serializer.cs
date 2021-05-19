@@ -8,7 +8,7 @@ namespace coursework
 {
     public static class Serializer
     {
-        public static void DeserealizeFilms(List<Film> films)
+        public static void DeserealizeFilms(FilmCollection collection)
         {
             JsonTextReader reader = new JsonTextReader(new StreamReader("films.json"));
             reader.SupportMultipleContent = true;
@@ -19,7 +19,7 @@ namespace coursework
                     break;
                 }
                 JsonSerializer serializer = new JsonSerializer();
-                films = serializer.Deserialize<List<Film>>(reader);
+                collection.films = serializer.Deserialize<List<Film>>(reader);
                 /*Film newFilm = serializer.Deserialize<Film>(reader);
                 Login.admin.films.Add(newFilm);*/
             }

@@ -14,10 +14,11 @@ namespace coursework
         Main main;
         Film film;
         List<Film> films;
-        public Add_film(Film film, Admin admin)             //изменение информации о фильме
+        public Add_film(List<Film> films, Film film, Admin admin)             //изменение информации о фильме
         {
             InitializeComponent();
 
+            this.films = films;
             this.film = film;
             this.admin = admin;
 
@@ -43,10 +44,11 @@ namespace coursework
                 onloadPoster.Visible = false;
         }
 
-        public Add_film(List<Film> films, Admin admin)
+        public Add_film(FilmCollection collection, Admin admin)
         {
-            this.films = films;
+            films = collection.films;
             this.admin = admin;
+
             InitializeComponent();
 
             saveChanges.Visible = false;
@@ -54,7 +56,7 @@ namespace coursework
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
-        {
+        { 
 
         }
 

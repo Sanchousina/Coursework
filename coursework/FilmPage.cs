@@ -98,7 +98,15 @@ namespace coursework
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            main = new Main(user);
+            if (admin == null)
+            {
+                main = new Main(user);
+            }
+            else if (user == null)
+            {
+                main = new Main(admin);
+            }
+            //main = new Main(user);
             main.Show();
         }
 
@@ -120,7 +128,7 @@ namespace coursework
         private void ChangeInfo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add_film change = new Add_film(film, admin);
+            Add_film change = new Add_film(films, film, admin);
             change.Show();
         }
 
