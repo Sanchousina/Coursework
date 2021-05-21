@@ -30,6 +30,9 @@ namespace coursework
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Any = new System.Windows.Forms.RadioButton();
+            this.Japan = new System.Windows.Forms.RadioButton();
+            this.age_limit = new System.Windows.Forms.ComboBox();
             this.LogOut = new System.Windows.Forms.Button();
             this.AddFilm = new System.Windows.Forms.Button();
             this.Italy = new System.Windows.Forms.RadioButton();
@@ -37,7 +40,7 @@ namespace coursework
             this.history = new System.Windows.Forms.CheckBox();
             this.family = new System.Windows.Forms.CheckBox();
             this.year = new System.Windows.Forms.NumericUpDown();
-            this.Russia = new System.Windows.Forms.RadioButton();
+            this.GreatBritain = new System.Windows.Forms.RadioButton();
             this.France = new System.Windows.Forms.RadioButton();
             this.USA = new System.Windows.Forms.RadioButton();
             this.fantasy = new System.Windows.Forms.CheckBox();
@@ -55,7 +58,6 @@ namespace coursework
             this.searchField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.catalog = new System.Windows.Forms.Panel();
-            this.age_limit = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +70,8 @@ namespace coursework
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.Any);
+            this.panel1.Controls.Add(this.Japan);
             this.panel1.Controls.Add(this.age_limit);
             this.panel1.Controls.Add(this.LogOut);
             this.panel1.Controls.Add(this.AddFilm);
@@ -76,7 +80,7 @@ namespace coursework
             this.panel1.Controls.Add(this.history);
             this.panel1.Controls.Add(this.family);
             this.panel1.Controls.Add(this.year);
-            this.panel1.Controls.Add(this.Russia);
+            this.panel1.Controls.Add(this.GreatBritain);
             this.panel1.Controls.Add(this.France);
             this.panel1.Controls.Add(this.USA);
             this.panel1.Controls.Add(this.fantasy);
@@ -92,6 +96,45 @@ namespace coursework
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 662);
             this.panel1.TabIndex = 0;
+            // 
+            // Any
+            // 
+            this.Any.AutoSize = true;
+            this.Any.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Any.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Any.Location = new System.Drawing.Point(105, 326);
+            this.Any.Name = "Any";
+            this.Any.Size = new System.Drawing.Size(45, 19);
+            this.Any.TabIndex = 53;
+            this.Any.TabStop = true;
+            this.Any.Text = "Any";
+            this.Any.UseVisualStyleBackColor = true;
+            // 
+            // Japan
+            // 
+            this.Japan.AutoSize = true;
+            this.Japan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Japan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Japan.Location = new System.Drawing.Point(105, 301);
+            this.Japan.Name = "Japan";
+            this.Japan.Size = new System.Drawing.Size(54, 19);
+            this.Japan.TabIndex = 52;
+            this.Japan.TabStop = true;
+            this.Japan.Text = "Japan";
+            this.Japan.UseVisualStyleBackColor = true;
+            // 
+            // age_limit
+            // 
+            this.age_limit.BackColor = System.Drawing.Color.LightGray;
+            this.age_limit.FormattingEnabled = true;
+            this.age_limit.Items.AddRange(new object[] {
+            "16+",
+            "none"});
+            this.age_limit.Location = new System.Drawing.Point(18, 383);
+            this.age_limit.Name = "age_limit";
+            this.age_limit.Size = new System.Drawing.Size(61, 23);
+            this.age_limit.TabIndex = 51;
+            this.age_limit.Text = "none";
             // 
             // LogOut
             // 
@@ -185,11 +228,6 @@ namespace coursework
             0,
             0,
             0});
-            this.year.Minimum = new decimal(new int[] {
-            1980,
-            0,
-            0,
-            0});
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(46, 19);
             this.year.TabIndex = 43;
@@ -199,18 +237,18 @@ namespace coursework
             0,
             0});
             // 
-            // Russia
+            // GreatBritain
             // 
-            this.Russia.AutoSize = true;
-            this.Russia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Russia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Russia.Location = new System.Drawing.Point(105, 224);
-            this.Russia.Name = "Russia";
-            this.Russia.Size = new System.Drawing.Size(57, 19);
-            this.Russia.TabIndex = 41;
-            this.Russia.TabStop = true;
-            this.Russia.Text = "Russia";
-            this.Russia.UseVisualStyleBackColor = true;
+            this.GreatBritain.AutoSize = true;
+            this.GreatBritain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GreatBritain.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.GreatBritain.Location = new System.Drawing.Point(105, 224);
+            this.GreatBritain.Name = "GreatBritain";
+            this.GreatBritain.Size = new System.Drawing.Size(89, 19);
+            this.GreatBritain.TabIndex = 41;
+            this.GreatBritain.TabStop = true;
+            this.GreatBritain.Text = "Great Britain";
+            this.GreatBritain.UseVisualStyleBackColor = true;
             // 
             // France
             // 
@@ -413,19 +451,6 @@ namespace coursework
             this.catalog.Size = new System.Drawing.Size(704, 599);
             this.catalog.TabIndex = 2;
             // 
-            // age_limit
-            // 
-            this.age_limit.BackColor = System.Drawing.Color.LightGray;
-            this.age_limit.FormattingEnabled = true;
-            this.age_limit.Items.AddRange(new object[] {
-            "16+",
-            "none"});
-            this.age_limit.Location = new System.Drawing.Point(18, 383);
-            this.age_limit.Name = "age_limit";
-            this.age_limit.Size = new System.Drawing.Size(61, 23);
-            this.age_limit.TabIndex = 51;
-            this.age_limit.Text = "none";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -467,7 +492,7 @@ namespace coursework
         private System.Windows.Forms.CheckBox history;
         private System.Windows.Forms.CheckBox family;
         private System.Windows.Forms.NumericUpDown year;
-        private System.Windows.Forms.RadioButton Russia;
+        private System.Windows.Forms.RadioButton GreatBritain;
         private System.Windows.Forms.RadioButton France;
         private System.Windows.Forms.RadioButton USA;
         private System.Windows.Forms.CheckBox fantasy;
@@ -485,5 +510,7 @@ namespace coursework
         private System.Windows.Forms.Panel catalog;
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.ComboBox age_limit;
+        private System.Windows.Forms.RadioButton Any;
+        private System.Windows.Forms.RadioButton Japan;
     }
 }

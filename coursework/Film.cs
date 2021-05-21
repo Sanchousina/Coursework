@@ -54,22 +54,35 @@ namespace coursework
             List<Film> res = new List<Film>();
             bool check = false;
             for(int i = 0; i < films.Count; i++)
-            {
-                for(int j = 0; j < genres.Count; j++)
+            {  
+                if(genres.Count == 0)
                 {
-                    if(films[i].genre == genres[j])
+                    check = true;
+                }
+                else
+                {
+                    for (int j = 0; j < genres.Count; j++)
                     {
-                        check = true;
-                        break;
+                        if (films[i].genre == genres[j])
+                        {
+                            check = true;
+                            break;
+                        }
                     }
                 }
-                if(films[i].country != country)
+                if(country != "Any")
                 {
-                    check = false;
+                    if (films[i].country != country)
+                    {
+                        check = false;
+                    }
                 }
-                if(films[i].year != year)
+                if(year != "0")
                 {
-                    check = false;
+                    if (films[i].year != year)
+                    {
+                        check = false;
+                    }
                 }
                 if(films[i].age_limit != age_limit)
                 {
@@ -78,7 +91,8 @@ namespace coursework
                 if(check == true)
                 {
                     res.Add(films[i]);
-                }
+                    check = false;
+                }             
             }
             return res;
         }

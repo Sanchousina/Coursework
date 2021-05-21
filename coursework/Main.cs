@@ -209,9 +209,9 @@ namespace coursework
             {
                 country = "France";
             }
-            if (Russia.Checked)
+            if (GreatBritain.Checked)
             {
-                country = "Russia";
+                country = "Great Britain";
             }
             if (Italy.Checked)
             {
@@ -220,6 +220,14 @@ namespace coursework
             if (SouthKorea.Checked)
             {
                 country = "South Korea";
+            }
+            if (Japan.Checked)
+            {
+                country = "Japan";
+            }
+            if (Any.Checked)
+            {
+                country = "Any";
             }
 
             bool limit = false;
