@@ -30,61 +30,61 @@ namespace coursework
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LogOut = new System.Windows.Forms.Button();
             this.AddFilm = new System.Windows.Forms.Button();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Italy = new System.Windows.Forms.RadioButton();
+            this.SouthKorea = new System.Windows.Forms.RadioButton();
+            this.history = new System.Windows.Forms.CheckBox();
+            this.family = new System.Windows.Forms.CheckBox();
+            this.year = new System.Windows.Forms.NumericUpDown();
+            this.Russia = new System.Windows.Forms.RadioButton();
+            this.France = new System.Windows.Forms.RadioButton();
+            this.USA = new System.Windows.Forms.RadioButton();
+            this.fantasy = new System.Windows.Forms.CheckBox();
+            this.romance = new System.Windows.Forms.CheckBox();
+            this.detective = new System.Windows.Forms.CheckBox();
+            this.horror = new System.Windows.Forms.CheckBox();
+            this.comedy = new System.Windows.Forms.CheckBox();
+            this.drama = new System.Windows.Forms.CheckBox();
             this.filter = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.userPage = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Search = new System.Windows.Forms.PictureBox();
             this.searchField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.catalog = new System.Windows.Forms.Panel();
-            this.LogOut = new System.Windows.Forms.Button();
+            this.age_limit = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.age_limit);
             this.panel1.Controls.Add(this.LogOut);
             this.panel1.Controls.Add(this.AddFilm);
-            this.panel1.Controls.Add(this.radioButton6);
-            this.panel1.Controls.Add(this.radioButton5);
-            this.panel1.Controls.Add(this.checkBox8);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.checkBox5);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.Italy);
+            this.panel1.Controls.Add(this.SouthKorea);
+            this.panel1.Controls.Add(this.history);
+            this.panel1.Controls.Add(this.family);
+            this.panel1.Controls.Add(this.year);
+            this.panel1.Controls.Add(this.Russia);
+            this.panel1.Controls.Add(this.France);
+            this.panel1.Controls.Add(this.USA);
+            this.panel1.Controls.Add(this.fantasy);
+            this.panel1.Controls.Add(this.romance);
+            this.panel1.Controls.Add(this.detective);
+            this.panel1.Controls.Add(this.horror);
+            this.panel1.Controls.Add(this.comedy);
+            this.panel1.Controls.Add(this.drama);
             this.panel1.Controls.Add(this.filter);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -92,6 +92,22 @@ namespace coursework
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 662);
             this.panel1.TabIndex = 0;
+            // 
+            // LogOut
+            // 
+            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Location = new System.Drawing.Point(34, 508);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(130, 32);
+            this.LogOut.TabIndex = 49;
+            this.LogOut.Text = "Log out";
+            this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // AddFilm
             // 
@@ -109,203 +125,190 @@ namespace coursework
             this.AddFilm.UseVisualStyleBackColor = false;
             this.AddFilm.Click += new System.EventHandler(this.AddFilm_Click_1);
             // 
-            // radioButton6
+            // Italy
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton6.Location = new System.Drawing.Point(105, 249);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(46, 19);
-            this.radioButton6.TabIndex = 47;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Italy";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.Italy.AutoSize = true;
+            this.Italy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Italy.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Italy.Location = new System.Drawing.Point(105, 249);
+            this.Italy.Name = "Italy";
+            this.Italy.Size = new System.Drawing.Size(46, 19);
+            this.Italy.TabIndex = 47;
+            this.Italy.TabStop = true;
+            this.Italy.Text = "Italy";
+            this.Italy.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // SouthKorea
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton5.Location = new System.Drawing.Point(105, 276);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(88, 19);
-            this.radioButton5.TabIndex = 46;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "South Korea";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.SouthKorea.AutoSize = true;
+            this.SouthKorea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SouthKorea.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SouthKorea.Location = new System.Drawing.Point(105, 276);
+            this.SouthKorea.Name = "SouthKorea";
+            this.SouthKorea.Size = new System.Drawing.Size(88, 19);
+            this.SouthKorea.TabIndex = 46;
+            this.SouthKorea.TabStop = true;
+            this.SouthKorea.Text = "South Korea";
+            this.SouthKorea.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // history
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox8.ForeColor = System.Drawing.Color.White;
-            this.checkBox8.Location = new System.Drawing.Point(17, 352);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(59, 19);
-            this.checkBox8.TabIndex = 45;
-            this.checkBox8.Text = "history";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.history.AutoSize = true;
+            this.history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history.ForeColor = System.Drawing.Color.White;
+            this.history.Location = new System.Drawing.Point(17, 352);
+            this.history.Name = "history";
+            this.history.Size = new System.Drawing.Size(59, 19);
+            this.history.TabIndex = 45;
+            this.history.Text = "history";
+            this.history.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // family
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox7.ForeColor = System.Drawing.Color.White;
-            this.checkBox7.Location = new System.Drawing.Point(18, 327);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(56, 19);
-            this.checkBox7.TabIndex = 44;
-            this.checkBox7.Text = "family";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.family.AutoSize = true;
+            this.family.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.family.ForeColor = System.Drawing.Color.White;
+            this.family.Location = new System.Drawing.Point(18, 327);
+            this.family.Name = "family";
+            this.family.Size = new System.Drawing.Size(56, 19);
+            this.family.TabIndex = 44;
+            this.family.Text = "family";
+            this.family.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // year
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.LightGray;
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Location = new System.Drawing.Point(105, 387);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.year.BackColor = System.Drawing.Color.LightGray;
+            this.year.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.year.Location = new System.Drawing.Point(131, 387);
+            this.year.Maximum = new decimal(new int[] {
             2021,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.year.Minimum = new decimal(new int[] {
             1980,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 19);
-            this.numericUpDown1.TabIndex = 43;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(46, 19);
+            this.year.TabIndex = 43;
+            this.year.Value = new decimal(new int[] {
             2020,
             0,
             0,
             0});
             // 
-            // radioButton4
+            // Russia
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton4.Location = new System.Drawing.Point(17, 387);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(44, 19);
-            this.radioButton4.TabIndex = 42;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "18+";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Russia.AutoSize = true;
+            this.Russia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Russia.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Russia.Location = new System.Drawing.Point(105, 224);
+            this.Russia.Name = "Russia";
+            this.Russia.Size = new System.Drawing.Size(57, 19);
+            this.Russia.TabIndex = 41;
+            this.Russia.TabStop = true;
+            this.Russia.Text = "Russia";
+            this.Russia.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // France
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton3.Location = new System.Drawing.Point(105, 224);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(57, 19);
-            this.radioButton3.TabIndex = 41;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Russia";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.France.AutoSize = true;
+            this.France.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.France.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.France.Location = new System.Drawing.Point(105, 198);
+            this.France.Name = "France";
+            this.France.Size = new System.Drawing.Size(59, 19);
+            this.France.TabIndex = 40;
+            this.France.TabStop = true;
+            this.France.Text = "France";
+            this.France.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // USA
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton2.Location = new System.Drawing.Point(105, 198);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 19);
-            this.radioButton2.TabIndex = 40;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "France";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.USA.AutoSize = true;
+            this.USA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.USA.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.USA.Location = new System.Drawing.Point(105, 172);
+            this.USA.Name = "USA";
+            this.USA.Size = new System.Drawing.Size(46, 19);
+            this.USA.TabIndex = 39;
+            this.USA.TabStop = true;
+            this.USA.Text = "USA";
+            this.USA.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // fantasy
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton1.Location = new System.Drawing.Point(105, 172);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(46, 19);
-            this.radioButton1.TabIndex = 39;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "USA";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.fantasy.AutoSize = true;
+            this.fantasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fantasy.ForeColor = System.Drawing.Color.White;
+            this.fantasy.Location = new System.Drawing.Point(18, 302);
+            this.fantasy.Name = "fantasy";
+            this.fantasy.Size = new System.Drawing.Size(61, 19);
+            this.fantasy.TabIndex = 38;
+            this.fantasy.Text = "fantasy";
+            this.fantasy.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // romance
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(18, 302);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(61, 19);
-            this.checkBox6.TabIndex = 38;
-            this.checkBox6.Text = "fantasy";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.romance.AutoSize = true;
+            this.romance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.romance.ForeColor = System.Drawing.Color.White;
+            this.romance.Location = new System.Drawing.Point(18, 276);
+            this.romance.Name = "romance";
+            this.romance.Size = new System.Drawing.Size(70, 19);
+            this.romance.TabIndex = 37;
+            this.romance.Text = "romance";
+            this.romance.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // detective
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(18, 276);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(70, 19);
-            this.checkBox5.TabIndex = 37;
-            this.checkBox5.Text = "romance";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.detective.AutoSize = true;
+            this.detective.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detective.ForeColor = System.Drawing.Color.White;
+            this.detective.Location = new System.Drawing.Point(18, 250);
+            this.detective.Name = "detective";
+            this.detective.Size = new System.Drawing.Size(71, 19);
+            this.detective.TabIndex = 36;
+            this.detective.Text = "detective";
+            this.detective.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // horror
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(18, 250);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(71, 19);
-            this.checkBox4.TabIndex = 36;
-            this.checkBox4.Text = "detective";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.horror.AutoSize = true;
+            this.horror.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.horror.ForeColor = System.Drawing.Color.White;
+            this.horror.Location = new System.Drawing.Point(18, 224);
+            this.horror.Name = "horror";
+            this.horror.Size = new System.Drawing.Size(56, 19);
+            this.horror.TabIndex = 35;
+            this.horror.Text = "horror";
+            this.horror.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // comedy
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(18, 224);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(56, 19);
-            this.checkBox3.TabIndex = 35;
-            this.checkBox3.Text = "horror";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.comedy.AutoSize = true;
+            this.comedy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comedy.ForeColor = System.Drawing.Color.White;
+            this.comedy.Location = new System.Drawing.Point(18, 198);
+            this.comedy.Name = "comedy";
+            this.comedy.Size = new System.Drawing.Size(66, 19);
+            this.comedy.TabIndex = 34;
+            this.comedy.Text = "comedy";
+            this.comedy.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // drama
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(18, 198);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(66, 19);
-            this.checkBox2.TabIndex = 34;
-            this.checkBox2.Text = "comedy";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(18, 172);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 19);
-            this.checkBox1.TabIndex = 33;
-            this.checkBox1.Text = "drama";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.drama.AutoSize = true;
+            this.drama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drama.ForeColor = System.Drawing.Color.White;
+            this.drama.Location = new System.Drawing.Point(18, 172);
+            this.drama.Name = "drama";
+            this.drama.Size = new System.Drawing.Size(57, 19);
+            this.drama.TabIndex = 33;
+            this.drama.Text = "drama";
+            this.drama.UseVisualStyleBackColor = true;
             // 
             // filter
             // 
@@ -321,6 +324,7 @@ namespace coursework
             this.filter.TabIndex = 32;
             this.filter.Text = "find";
             this.filter.UseVisualStyleBackColor = false;
+            this.filter.Click += new System.EventHandler(this.filter_Click);
             // 
             // panel2
             // 
@@ -345,7 +349,7 @@ namespace coursework
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.panel3.Controls.Add(this.userPage);
-            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.Search);
             this.panel3.Controls.Add(this.searchField);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -367,16 +371,18 @@ namespace coursework
             this.userPage.TabStop = false;
             this.userPage.Click += new System.EventHandler(this.userPage_Click_1);
             // 
-            // pictureBox3
+            // Search
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox3.Image = global::coursework.Properties.Resources.loup;
-            this.pictureBox3.Location = new System.Drawing.Point(600, 23);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 38;
-            this.pictureBox3.TabStop = false;
+            this.Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search.Image = global::coursework.Properties.Resources.loup;
+            this.Search.Location = new System.Drawing.Point(600, 23);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(23, 23);
+            this.Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Search.TabIndex = 38;
+            this.Search.TabStop = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // searchField
             // 
@@ -407,21 +413,18 @@ namespace coursework
             this.catalog.Size = new System.Drawing.Size(704, 599);
             this.catalog.TabIndex = 2;
             // 
-            // LogOut
+            // age_limit
             // 
-            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogOut.FlatAppearance.BorderSize = 0;
-            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LogOut.ForeColor = System.Drawing.Color.White;
-            this.LogOut.Location = new System.Drawing.Point(34, 508);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(130, 32);
-            this.LogOut.TabIndex = 49;
-            this.LogOut.Text = "Log out";
-            this.LogOut.UseVisualStyleBackColor = false;
-            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            this.age_limit.BackColor = System.Drawing.Color.LightGray;
+            this.age_limit.FormattingEnabled = true;
+            this.age_limit.Items.AddRange(new object[] {
+            "16+",
+            "none"});
+            this.age_limit.Location = new System.Drawing.Point(18, 383);
+            this.age_limit.Name = "age_limit";
+            this.age_limit.Size = new System.Drawing.Size(61, 23);
+            this.age_limit.TabIndex = 51;
+            this.age_limit.Text = "none";
             // 
             // Main
             // 
@@ -442,13 +445,13 @@ namespace coursework
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.year)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,28 +462,28 @@ namespace coursework
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton Italy;
+        private System.Windows.Forms.RadioButton SouthKorea;
+        private System.Windows.Forms.CheckBox history;
+        private System.Windows.Forms.CheckBox family;
+        private System.Windows.Forms.NumericUpDown year;
+        private System.Windows.Forms.RadioButton Russia;
+        private System.Windows.Forms.RadioButton France;
+        private System.Windows.Forms.RadioButton USA;
+        private System.Windows.Forms.CheckBox fantasy;
+        private System.Windows.Forms.CheckBox romance;
+        private System.Windows.Forms.CheckBox detective;
+        private System.Windows.Forms.CheckBox horror;
+        private System.Windows.Forms.CheckBox comedy;
+        private System.Windows.Forms.CheckBox drama;
         private System.Windows.Forms.Button filter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddFilm;
         private System.Windows.Forms.PictureBox userPage;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Search;
         private System.Windows.Forms.TextBox searchField;
         private System.Windows.Forms.Panel catalog;
         private System.Windows.Forms.Button LogOut;
+        private System.Windows.Forms.ComboBox age_limit;
     }
 }

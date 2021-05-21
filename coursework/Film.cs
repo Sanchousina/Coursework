@@ -35,7 +35,7 @@ namespace coursework
 
        public static Film Search(List<Film> films, string title)
        {
-            Film res = films[0];
+            Film res = null;
             for(int i = 0; i < films.Count; i++)
             {
                 if(films[i].film_name == title)
@@ -46,6 +46,42 @@ namespace coursework
             }
             return res;
        }
+
+        
+        public static List<Film> Filter(List<Film> films, List<string> genres,
+            string country, string year, bool age_limit)
+        {
+            List<Film> res = new List<Film>();
+            bool check = false;
+            for(int i = 0; i < films.Count; i++)
+            {
+                for(int j = 0; j < genres.Count; j++)
+                {
+                    if(films[i].genre == genres[j])
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+                if(films[i].country != country)
+                {
+                    check = false;
+                }
+                if(films[i].year != year)
+                {
+                    check = false;
+                }
+                if(films[i].age_limit != age_limit)
+                {
+                    check = false;
+                }
+                if(check == true)
+                {
+                    res.Add(films[i]);
+                }
+            }
+            return res;
+        }
 
         public void Delete(List<Film> films)
         {

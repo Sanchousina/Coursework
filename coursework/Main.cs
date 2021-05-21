@@ -96,7 +96,8 @@ namespace coursework
                 title.BorderStyle = BorderStyle.None;
                 title.ForeColor = Color.WhiteSmoke;
                 float currentSize = title.Font.SizeInPoints;
-                currentSize += 3;
+                currentSize += 5;
+                title.Font = new Font(title.Font.Name, currentSize, title.Font.Unit);
 
                 catalog.Controls.Add(p);
                 catalog.Controls.Add(title);
@@ -124,5 +125,121 @@ namespace coursework
             Login login = new Login();
             login.Show();
         }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            string f = searchField.Text;
+            if(f == "")
+            {
+                catalog.Controls.Clear();
+                LoadCatalog(collection.films);
+            }
+            else
+            {
+                List<Film> search_film = new List<Film>();
+                Film film = Film.Search(collection.films, f);
+                if (film != null)
+                {
+                    search_film.Add(film);
+                    catalog.Controls.Clear();
+                    LoadCatalog(search_film);
+                }
+                else
+                {
+                    catalog.Controls.Clear();
+
+                    Label message = new Label();
+                    message.Location = new Point(40, 40);
+                    message.AutoSize = true;
+                    message.Text = "no results were found for your search";
+                    message.BackColor = catalog.BackColor;
+                    message.BorderStyle = BorderStyle.None;
+                    message.ForeColor = Color.WhiteSmoke;
+                    float currentSize = message.Font.SizeInPoints;
+                    currentSize += 15;
+                    message.Font = new Font(message.Font.Name, currentSize, message.Font.Unit);
+
+                    catalog.Controls.Add(message);
+                }
+            }
+        }
+
+        private void filter_Click(object sender, EventArgs e)
+        {
+            List<string> genres = new List<string>();
+            if (drama.Checked)
+            {
+                genres.Add("drama");
+            }
+            if (comedy.Checked)
+            {
+                genres.Add("comedy");
+            }
+            if (horror.Checked)
+            {
+                genres.Add("horror");
+            }
+            if (detective.Checked)
+            {
+                genres.Add("detective");
+            }
+            if (romance.Checked)
+            {
+                genres.Add("romance");
+            }
+            if (fantasy.Checked)
+            {
+                genres.Add("fantasy");
+            }
+            if (family.Checked)
+            {
+                genres.Add("family");
+            }
+            if (history.Checked)
+            {
+                genres.Add("history");
+            }
+
+            string country = "";
+            if (USA.Checked)
+            {
+                country = "USA";
+            }
+            if (France.Checked)
+            {
+                country = "France";
+            }
+            if (Russia.Checked)
+            {
+                country = "Russia";
+            }
+            if (Italy.Checked)
+            {
+                country = "Italy";
+            }
+            if (SouthKorea.Checked)
+            {
+                country = "South Korea";
+            }
+
+            bool limit = false;
+            if (age_limit.Text == "16+")
+            {
+                limit = true;
+            }
+            if (age_limit.Text == "none")
+            {
+                limit = false;
+            }
+
+            string release_year = year.Value.ToString();
+
+            List<Film> result = Film.Filter(collection.films, genres, country, release_year, limit);
+
+            catalog.Controls.Clear();
+            LoadCatalog(result);
+        }
+
+
     }
 }
