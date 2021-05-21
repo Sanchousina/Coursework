@@ -23,15 +23,9 @@ namespace coursework
             
             InitializeComponent();
 
-            //Login.admin.films = new List<Film>();
             collection = new FilmCollection();          
             Serializer.DeserealizeFilms(collection);
             LoadCatalog(collection.films) ;          
-
-            /*if (Login.IsItAdmin == false)
-            {
-                AddFilm.Visible = false;
-            }*/
 
             AddFilm.Visible = false;
         }
@@ -41,6 +35,8 @@ namespace coursework
             admin = a;
 
             InitializeComponent();
+
+            userPage.Enabled = false;
 
             collection = new FilmCollection();
             Serializer.DeserealizeFilms(collection);

@@ -57,6 +57,8 @@ namespace coursework
 
             InitializeComponent();
 
+            AddUser.Visible = false;
+
             title.Text = film.film_name;
             poster.Image = ConvertImg.Base64ToImage(film.poster);
             descriptionField.Text = film.description;
