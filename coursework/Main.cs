@@ -245,7 +245,26 @@ namespace coursework
             List<Film> result = Film.Filter(collection.films, genres, country, release_year, limit);
 
             catalog.Controls.Clear();
-            LoadCatalog(result);
+
+            if(result.Count == 0)
+            {
+                Label message = new Label();
+                message.Location = new Point(40, 40);
+                message.AutoSize = true;
+                message.Text = "no results were found for your search";
+                message.BackColor = catalog.BackColor;
+                message.BorderStyle = BorderStyle.None;
+                message.ForeColor = Color.WhiteSmoke;
+                float currentSize = message.Font.SizeInPoints;
+                currentSize += 15;
+                message.Font = new Font(message.Font.Name, currentSize, message.Font.Unit);
+
+                catalog.Controls.Add(message);
+            }
+            else
+            {
+                LoadCatalog(result);
+            }
         }
 
 
