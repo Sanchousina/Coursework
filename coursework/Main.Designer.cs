@@ -55,6 +55,7 @@ namespace coursework
             this.searchField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.catalog = new System.Windows.Forms.Panel();
+            this.LogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -67,6 +68,7 @@ namespace coursework
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.LogOut);
             this.panel1.Controls.Add(this.AddFilm);
             this.panel1.Controls.Add(this.radioButton6);
             this.panel1.Controls.Add(this.radioButton5);
@@ -405,6 +407,22 @@ namespace coursework
             this.catalog.Size = new System.Drawing.Size(704, 599);
             this.catalog.TabIndex = 2;
             // 
+            // LogOut
+            // 
+            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Location = new System.Drawing.Point(34, 508);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(130, 32);
+            this.LogOut.TabIndex = 49;
+            this.LogOut.Text = "Log out";
+            this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -463,5 +481,6 @@ namespace coursework
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox searchField;
         private System.Windows.Forms.Panel catalog;
+        private System.Windows.Forms.Button LogOut;
     }
 }

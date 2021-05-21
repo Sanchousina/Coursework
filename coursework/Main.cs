@@ -121,5 +121,12 @@ namespace coursework
             user_page = new UserPage(user, admin);
             user_page.Show();
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }
