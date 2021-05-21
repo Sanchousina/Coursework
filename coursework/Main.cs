@@ -16,10 +16,10 @@ namespace coursework
         User user;
         Admin admin;
     
-        public Main(User u)
+        public Main(User u, Admin a)
         {
+            admin = a;
             user = u;
-            user_page = new UserPage(user);
             
             InitializeComponent();
 
@@ -54,9 +54,9 @@ namespace coursework
             this.Hide();
             PictureBox poster = (PictureBox)sender;
             //FilmPage film_page = new FilmPage(Film.Search(collection.films, poster.Name), user);
-            if (admin == null)
+            if (user != null)
             {
-                film_page = new FilmPage(Film.Search(collection.films, poster.Name), user);
+                film_page = new FilmPage(Film.Search(collection.films, poster.Name), user, admin);
             }
             else if(user == null)
             {
@@ -118,6 +118,7 @@ namespace coursework
         private void userPage_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            user_page = new UserPage(user, admin);
             user_page.Show();
         }
     }

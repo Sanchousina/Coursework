@@ -12,6 +12,9 @@ namespace coursework
         public string gender { get; set; }
         public string email { get; set; }
 
+        public List<Film> favorites { get; set; }
+        public List<Film> laters { get; set; }
+
         public User(string nickname, string password, string email, int age, string gender)
         {
             this.nickname = nickname;
@@ -19,6 +22,9 @@ namespace coursework
             this.email = email;
             this.age = age;
             this.gender = gender;
+
+            favorites = new List<Film>();
+            laters = new List<Film>();
         }
 
         

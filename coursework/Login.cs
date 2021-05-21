@@ -22,7 +22,7 @@ namespace coursework
             admin = new Admin();
 
             admin.users = new List<User>();
-            Serializer.DeserealizeUsers(admin.users);
+            Serializer.DeserealizeUsers(admin);
             
             nameField.Text = "nickname";
             nameField.ForeColor = Color.Gray;
@@ -71,7 +71,7 @@ namespace coursework
         private void registLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Registration registration = new Registration();
+            Registration registration = new Registration(admin);
             registration.Show();
         }
 
@@ -115,7 +115,7 @@ namespace coursework
                     {
                         //IsItAdmin = false;
                         this.Hide();
-                        main = new Main(user);
+                        main = new Main(user, admin);
                         main.Show();
                     }
                     else if (res == "wrong password")

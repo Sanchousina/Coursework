@@ -14,18 +14,14 @@ namespace coursework
         User user;
         Admin admin;
         List<Film> films;
-        public FilmPage(Film f, User u)
+        public FilmPage(Film f, User u, Admin a)
         {
+            admin = a;
             film = f;
             user = u;
 
             InitializeComponent();
 
-            /* if (Login.IsItAdmin == false)
-             {
-                 DeleteFilm.Visible = false;
-                 ChangeInfo.Visible = false;
-             }*/
             DeleteFilm.Visible = false;
             ChangeInfo.Visible = false;
 
@@ -98,15 +94,14 @@ namespace coursework
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (admin == null)
+            if (user != null)
             {
-                main = new Main(user);
+                main = new Main(user, admin);
             }
             else if (user == null)
             {
                 main = new Main(admin);
             }
-            //main = new Main(user);
             main.Show();
         }
 
@@ -136,6 +131,12 @@ namespace coursework
         {
             Link l = new Link();
             l.Show();
+        }
+
+        private void AddUser_Click(object sender, EventArgs e)
+        {
+            ChooseCollection choose = new ChooseCollection(user, film, admin);
+            choose.Show();
         }
     }
 }

@@ -4,6 +4,9 @@
     <Compile Update="Add_film.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ChooseCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FilmPage.cs">
       <SubType>Form</SubType>
     </Compile>

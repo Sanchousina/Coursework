@@ -22,3 +22,4 @@ F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.UserPage.resources
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.FilmPage.resources
 F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.Link.resources
+F:\курсач ооп\coursework\coursework\obj\Debug\netcoreapp3.1\coursework.ChooseCollection.resources

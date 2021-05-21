@@ -51,6 +51,7 @@ namespace coursework
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Back = new System.Windows.Forms.Button();
+            this.AddUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.poster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -251,9 +252,9 @@ namespace coursework
             this.DeleteFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteFilm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DeleteFilm.ForeColor = System.Drawing.Color.White;
-            this.DeleteFilm.Location = new System.Drawing.Point(0, 38);
+            this.DeleteFilm.Location = new System.Drawing.Point(0, 36);
             this.DeleteFilm.Name = "DeleteFilm";
-            this.DeleteFilm.Size = new System.Drawing.Size(148, 33);
+            this.DeleteFilm.Size = new System.Drawing.Size(150, 35);
             this.DeleteFilm.TabIndex = 49;
             this.DeleteFilm.Text = "Delete film";
             this.DeleteFilm.UseVisualStyleBackColor = false;
@@ -270,7 +271,7 @@ namespace coursework
             this.ChangeInfo.ForeColor = System.Drawing.Color.White;
             this.ChangeInfo.Location = new System.Drawing.Point(0, 0);
             this.ChangeInfo.Name = "ChangeInfo";
-            this.ChangeInfo.Size = new System.Drawing.Size(148, 38);
+            this.ChangeInfo.Size = new System.Drawing.Size(150, 36);
             this.ChangeInfo.TabIndex = 50;
             this.ChangeInfo.Text = "Change info";
             this.ChangeInfo.UseVisualStyleBackColor = false;
@@ -298,12 +299,13 @@ namespace coursework
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.AddUser);
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.DeleteFilm);
             this.panel2.Controls.Add(this.ChangeInfo);
-            this.panel2.Location = new System.Drawing.Point(566, 435);
+            this.panel2.Location = new System.Drawing.Point(566, 414);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 111);
+            this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 53;
             // 
             // Back
@@ -317,11 +319,28 @@ namespace coursework
             this.Back.ForeColor = System.Drawing.Color.White;
             this.Back.Location = new System.Drawing.Point(0, 71);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(148, 40);
+            this.Back.Size = new System.Drawing.Size(150, 36);
             this.Back.TabIndex = 54;
             this.Back.Text = "Back to catalog";
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // AddUser
+            // 
+            this.AddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.AddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddUser.FlatAppearance.BorderSize = 0;
+            this.AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddUser.ForeColor = System.Drawing.Color.White;
+            this.AddUser.Location = new System.Drawing.Point(0, 107);
+            this.AddUser.Name = "AddUser";
+            this.AddUser.Size = new System.Drawing.Size(150, 36);
+            this.AddUser.TabIndex = 55;
+            this.AddUser.Text = "Add to  collection";
+            this.AddUser.UseVisualStyleBackColor = false;
+            this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // FilmPage
             // 
@@ -387,5 +406,6 @@ namespace coursework
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button AddUser;
     }
 }

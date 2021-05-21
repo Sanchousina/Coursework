@@ -9,9 +9,12 @@ namespace coursework
 {
     public partial class Registration : Form
     {
-        public Registration()
+        Admin admin;
+        public Registration(Admin a)
         {
             InitializeComponent();
+
+            admin = a;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -52,7 +55,8 @@ namespace coursework
                     email != "" && age != 0 && gender != "")
                 {
                     User user = new User(nickname, password, email, age, gender);
-                    Serializer.Serialize("users.json", user);
+                    admin.users.Add(user);
+                    Serializer.Serialize("users.json", admin.users);
 
                     MessageBox.Show(
                         "You have been successfully registered",

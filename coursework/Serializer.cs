@@ -26,7 +26,69 @@ namespace coursework
             reader.Close();
         }
 
-        public static void DeserealizeUsers(List<User> users)
+        public static void DeserealizeFav(User user, string file_name)
+        {
+            StreamReader str;
+            FileStream fav;
+            try
+            {
+                using(str = new StreamReader(file_name))
+                {
+                    JsonTextReader reader = new JsonTextReader(str);
+                    reader.SupportMultipleContent = true;
+                    while (true)
+                    {
+                        if (!reader.Read())
+                        {
+                            break;
+                        }
+                        JsonSerializer serializer = new JsonSerializer();
+                        user.favorites = serializer.Deserialize<List<Film>>(reader);
+                        /*Film newFilm = serializer.Deserialize<Film>(reader);
+                        Login.admin.films.Add(newFilm);*/
+                    }
+                    reader.Close();
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                fav = File.Create(file_name);
+                fav.Close();
+            }
+        }
+
+        public static void DeserealizeLater(User user, string file_name)
+        {
+            StreamReader str;
+            FileStream lat;
+            try
+            {
+                using (str = new StreamReader(file_name))
+                {
+                    JsonTextReader reader = new JsonTextReader(str);
+                    reader.SupportMultipleContent = true;
+                    while (true)
+                    {
+                        if (!reader.Read())
+                        {
+                            break;
+                        }
+                        JsonSerializer serializer = new JsonSerializer();
+                        user.laters = serializer.Deserialize<List<Film>>(reader);
+                        /*Film newFilm = serializer.Deserialize<Film>(reader);
+                        Login.admin.films.Add(newFilm);*/
+                    }
+                    reader.Close();
+                }
+            }
+            catch(FileNotFoundException e)
+            {
+                lat = File.Create(file_name);
+                lat.Close();
+            }        
+        }
+
+        public static void DeserealizeUsers(Admin admin)
         {
             JsonTextReader reader = new JsonTextReader(new StreamReader("users.json"));
             reader.SupportMultipleContent = true;
@@ -37,14 +99,17 @@ namespace coursework
                     break;
                 }
                 JsonSerializer serializer = new JsonSerializer();
-                User newUser = serializer.Deserialize<User>(reader);
-                users.Add(newUser);
+                admin.users = serializer.Deserialize<List<User>>(reader);
+                /*User newUser = serializer.Deserialize<User>(reader);
+                users.Add(newUser);*/
             }
+
+            reader.Close();
         }
         
         public static void Serialize(string file_name, Object obj)
         {
-            File.AppendAllText(file_name, JsonConvert.SerializeObject(obj));
+            File.WriteAllText(file_name, JsonConvert.SerializeObject(obj));
         }
     }
 }
