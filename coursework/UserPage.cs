@@ -32,19 +32,12 @@ namespace coursework
             string file_name_fav = "fav_" + user.nickname + ".json";
             string file_name_later = "later_" + user.nickname + ".json";
 
-            /*fav = File.Create(file_name_fav);
-            fav.Close();
-            lat = File.Create(file_name_later);
-            lat.Close();*/
-
             Serializer.DeserealizeFav(user, file_name_fav);
             Serializer.DeserealizeLater(user, file_name_later);
-            /*admin.users = new List<User>();
-            Serializer.DeserealizeUsers(admin);*/
 
 
             LoadFavorites(user.favorites);
-            //LoadLaters(user.laters);
+            LoadLaters(user.laters);
         }
 
         private void LoadFavorites(List<Film> films)
@@ -99,30 +92,17 @@ namespace coursework
         {
             Button b = (Button)sender;
             Film f = Film.Search(user.favorites, b.Name);
-            
-            for(int i = 0; i < admin.users.Count; i++)
-            {
-                if(admin.users[i].nickname == user.nickname)
-                {
-                    for(int j = 0; j < admin.users[i].favorites.Count; j++)
-                    {
-                        if (admin.users[i].favorites[j] == f)
-                        {
-                            admin.users[i].favorites.RemoveAt(j);
-                            break;
-                        }
-                    }
-                }
-            }
-            //user.favorites.Remove(f);
 
-            File.WriteAllText("users.json", JsonConvert.SerializeObject(admin.users));
+            user.favorites.Remove(f);
+            string file_name_fav = "fav_" + user.nickname + ".json";
 
-            admin.users = new List<User>();
-            Serializer.DeserealizeUsers(admin);
+            File.WriteAllText(file_name_fav, JsonConvert.SerializeObject(user.favorites));
 
-            LoadFavorites(user.favorites);
-            this.Update();
+            MessageBox.Show(
+                    "The film was successfully deleted",
+                    "Film is deleted",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
         }
 
         private void LoadLaters(List<Film> films)
@@ -163,7 +143,7 @@ namespace coursework
                 delete.BackColor = Color.FromArgb(209, 4, 4);
                 delete.Location = new Point(230, y);
                 delete.Cursor = Cursors.Hand;
-                delete.Click += DeleteFav_Click;
+                delete.Click += DeleteLater_Click;
 
                 later.Controls.Add(p);
                 later.Controls.Add(title);
@@ -171,6 +151,23 @@ namespace coursework
 
                 y += p.Height + 40;
             }
+        }
+
+        private void DeleteLater_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            Film f = Film.Search(user.laters, b.Name);
+
+            user.laters.Remove(f);
+            string file_name_later = "later_" + user.nickname + ".json";
+
+            File.WriteAllText(file_name_later, JsonConvert.SerializeObject(user.laters));
+
+            MessageBox.Show(
+                    "The film was successfully deleted",
+                    "Film is deleted",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
         }
 
         private void Back_Click(object sender, EventArgs e)

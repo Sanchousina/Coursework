@@ -44,7 +44,7 @@ namespace coursework
         {
             user.laters.Add(film);
             string file_name = "later_" + user.nickname + ".json";
-            File.WriteAllText(file_name, JsonConvert.SerializeObject(admin.users));
+            File.WriteAllText(file_name, JsonConvert.SerializeObject(user.laters));
 
             MessageBox.Show(
                            "The movie was added successfully",
