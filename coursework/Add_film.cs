@@ -128,7 +128,7 @@ namespace coursework
         private void saveChanges_Click(object sender, EventArgs e)
         {
             film.film_name = filmNameField.Text;
-            film.year = releaseYear.Value.ToString();
+            film.year = (int)releaseYear.Value;
             film.country = countryField.Text;
             film.director = directorField.Text;
             film.genre = genreField.Text;

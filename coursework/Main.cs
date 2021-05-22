@@ -249,9 +249,20 @@ namespace coursework
                 limit = false;
             }
 
-            string release_year = year.Value.ToString();
+            int from = (int)from_year.Value;
+            int to = (int)to_year.Value;
 
-            List<Film> result = Film.Filter(collection.films, genres, country, release_year, limit);
+            if(from > to || to < from)
+            {
+                int temp = from;
+                from = to;
+                to = temp;
+
+                from_year.Value = to;
+                to_year.Value = from;
+            }
+
+            List<Film> result = Film.Filter(collection.films, genres, country, from, to, limit);
 
             catalog.Controls.Clear();
 

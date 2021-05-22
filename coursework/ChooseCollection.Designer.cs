@@ -31,8 +31,8 @@ namespace coursework
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddToFav = new System.Windows.Forms.Button();
             this.AddToLater = new System.Windows.Forms.Button();
+            this.AddToFav = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,23 +57,6 @@ namespace coursework
             this.panel1.Size = new System.Drawing.Size(367, 50);
             this.panel1.TabIndex = 1;
             // 
-            // AddToFav
-            // 
-            this.AddToFav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.AddToFav.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddToFav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AddToFav.FlatAppearance.BorderSize = 0;
-            this.AddToFav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddToFav.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddToFav.ForeColor = System.Drawing.Color.White;
-            this.AddToFav.Location = new System.Drawing.Point(0, 0);
-            this.AddToFav.Name = "AddToFav";
-            this.AddToFav.Size = new System.Drawing.Size(184, 50);
-            this.AddToFav.TabIndex = 51;
-            this.AddToFav.Text = "to My favorites";
-            this.AddToFav.UseVisualStyleBackColor = false;
-            this.AddToFav.Click += new System.EventHandler(this.AddToFav_Click);
-            // 
             // AddToLater
             // 
             this.AddToLater.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
@@ -91,6 +74,23 @@ namespace coursework
             this.AddToLater.UseVisualStyleBackColor = false;
             this.AddToLater.Click += new System.EventHandler(this.AddToLater_Click);
             // 
+            // AddToFav
+            // 
+            this.AddToFav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.AddToFav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddToFav.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AddToFav.FlatAppearance.BorderSize = 0;
+            this.AddToFav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddToFav.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddToFav.ForeColor = System.Drawing.Color.White;
+            this.AddToFav.Location = new System.Drawing.Point(0, 0);
+            this.AddToFav.Name = "AddToFav";
+            this.AddToFav.Size = new System.Drawing.Size(184, 50);
+            this.AddToFav.TabIndex = 51;
+            this.AddToFav.Text = "to My favorites";
+            this.AddToFav.UseVisualStyleBackColor = false;
+            this.AddToFav.Click += new System.EventHandler(this.AddToFav_Click);
+            // 
             // ChooseCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -99,6 +99,9 @@ namespace coursework
             this.ClientSize = new System.Drawing.Size(367, 95);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(383, 133);
+            this.MinimumSize = new System.Drawing.Size(383, 133);
             this.Name = "ChooseCollection";
             this.Text = "ChooseCollection";
             this.panel1.ResumeLayout(false);

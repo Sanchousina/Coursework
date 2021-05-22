@@ -383,6 +383,8 @@ namespace coursework
             this.ClientSize = new System.Drawing.Size(752, 514);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(768, 552);
+            this.MinimumSize = new System.Drawing.Size(768, 552);
             this.Name = "Add_film";
             this.Text = "Add_film";
             this.panel1.ResumeLayout(false);

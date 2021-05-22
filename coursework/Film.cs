@@ -9,8 +9,8 @@ namespace coursework
     public class Film
     {
         public string film_name;
-        public string year;
-        public string genre;   //может массив жанров? или оставить один
+        public int year;
+        public string genre;   
         public string country;
         public string director;
         public bool age_limit;
@@ -23,7 +23,7 @@ namespace coursework
             string director, bool age_limit, string description, string cast, string poster) 
         {
             film_name = name;
-            this.year = year.ToString();
+            this.year = year;
             this.genre = genre;
             this.country = country;
             this.director = director;
@@ -49,7 +49,7 @@ namespace coursework
 
         
         public static List<Film> Filter(List<Film> films, List<string> genres,
-            string country, string year, bool age_limit)
+            string country, int from, int to, bool age_limit)
         {
             List<Film> res = new List<Film>();
             bool check = false;
@@ -77,12 +77,9 @@ namespace coursework
                         check = false;
                     }
                 }
-                if(year != "0")
+                if(films[i].year < from || films[i].year > to)
                 {
-                    if (films[i].year != year)
-                    {
-                        check = false;
-                    }
+                    check = false;
                 }
                 if(films[i].age_limit != age_limit)
                 {

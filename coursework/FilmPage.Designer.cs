@@ -50,8 +50,8 @@ namespace coursework
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Back = new System.Windows.Forms.Button();
             this.AddUser = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.poster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -308,23 +308,6 @@ namespace coursework
             this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 53;
             // 
-            // Back
-            // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Back.FlatAppearance.BorderSize = 0;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(0, 71);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(150, 36);
-            this.Back.TabIndex = 54;
-            this.Back.Text = "Back to catalog";
-            this.Back.UseVisualStyleBackColor = false;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
             // AddUser
             // 
             this.AddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
@@ -341,6 +324,23 @@ namespace coursework
             this.AddUser.Text = "Add to  collection";
             this.AddUser.UseVisualStyleBackColor = false;
             this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
+            // 
+            // Back
+            // 
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Back.FlatAppearance.BorderSize = 0;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Back.ForeColor = System.Drawing.Color.White;
+            this.Back.Location = new System.Drawing.Point(0, 71);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(150, 36);
+            this.Back.TabIndex = 54;
+            this.Back.Text = "Back to catalog";
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // FilmPage
             // 
@@ -368,6 +368,7 @@ namespace coursework
             this.Controls.Add(this.poster);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(823, 602);
+            this.MinimumSize = new System.Drawing.Size(823, 602);
             this.Name = "FilmPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FilmPage";

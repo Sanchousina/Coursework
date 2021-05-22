@@ -227,6 +227,8 @@ namespace coursework
             this.Controls.Add(this.block1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(655, 486);
+            this.MinimumSize = new System.Drawing.Size(655, 486);
             this.Name = "UserPage";
             this.Text = "UserPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserPage_FormClosed);

@@ -223,6 +223,9 @@ namespace coursework
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(476, 491);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(492, 529);
+            this.MinimumSize = new System.Drawing.Size(492, 529);
             this.Name = "Registration";
             this.Text = "Registration";
             this.panel1.ResumeLayout(false);

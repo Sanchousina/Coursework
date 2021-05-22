@@ -30,6 +30,10 @@ namespace coursework
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.from_year = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.Any = new System.Windows.Forms.RadioButton();
             this.Japan = new System.Windows.Forms.RadioButton();
             this.age_limit = new System.Windows.Forms.ComboBox();
@@ -39,7 +43,7 @@ namespace coursework
             this.SouthKorea = new System.Windows.Forms.RadioButton();
             this.history = new System.Windows.Forms.CheckBox();
             this.family = new System.Windows.Forms.CheckBox();
-            this.year = new System.Windows.Forms.NumericUpDown();
+            this.to_year = new System.Windows.Forms.NumericUpDown();
             this.GreatBritain = new System.Windows.Forms.RadioButton();
             this.France = new System.Windows.Forms.RadioButton();
             this.USA = new System.Windows.Forms.RadioButton();
@@ -59,7 +63,8 @@ namespace coursework
             this.label1 = new System.Windows.Forms.Label();
             this.catalog = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.from_year)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.to_year)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,6 +75,10 @@ namespace coursework
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.from_year);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Any);
             this.panel1.Controls.Add(this.Japan);
             this.panel1.Controls.Add(this.age_limit);
@@ -79,7 +88,7 @@ namespace coursework
             this.panel1.Controls.Add(this.SouthKorea);
             this.panel1.Controls.Add(this.history);
             this.panel1.Controls.Add(this.family);
-            this.panel1.Controls.Add(this.year);
+            this.panel1.Controls.Add(this.to_year);
             this.panel1.Controls.Add(this.GreatBritain);
             this.panel1.Controls.Add(this.France);
             this.panel1.Controls.Add(this.USA);
@@ -96,6 +105,63 @@ namespace coursework
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 662);
             this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(100, 415);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 19);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "to:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(18, 415);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 19);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "from:";
+            // 
+            // from_year
+            // 
+            this.from_year.BackColor = System.Drawing.Color.LightGray;
+            this.from_year.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.from_year.Location = new System.Drawing.Point(28, 437);
+            this.from_year.Maximum = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.from_year.Minimum = new decimal(new int[] {
+            1980,
+            0,
+            0,
+            0});
+            this.from_year.Name = "from_year";
+            this.from_year.Size = new System.Drawing.Size(46, 19);
+            this.from_year.TabIndex = 55;
+            this.from_year.Value = new decimal(new int[] {
+            1980,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(17, 387);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 19);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "age limit:";
             // 
             // Any
             // 
@@ -130,7 +196,7 @@ namespace coursework
             this.age_limit.Items.AddRange(new object[] {
             "18+",
             "none"});
-            this.age_limit.Location = new System.Drawing.Point(18, 383);
+            this.age_limit.Location = new System.Drawing.Point(103, 386);
             this.age_limit.Name = "age_limit";
             this.age_limit.Size = new System.Drawing.Size(61, 23);
             this.age_limit.TabIndex = 51;
@@ -144,7 +210,7 @@ namespace coursework
             this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LogOut.ForeColor = System.Drawing.Color.White;
-            this.LogOut.Location = new System.Drawing.Point(34, 508);
+            this.LogOut.Location = new System.Drawing.Point(29, 566);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(130, 32);
             this.LogOut.TabIndex = 49;
@@ -160,7 +226,7 @@ namespace coursework
             this.AddFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddFilm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddFilm.ForeColor = System.Drawing.Color.White;
-            this.AddFilm.Location = new System.Drawing.Point(36, 475);
+            this.AddFilm.Location = new System.Drawing.Point(31, 533);
             this.AddFilm.Name = "AddFilm";
             this.AddFilm.Size = new System.Drawing.Size(128, 27);
             this.AddFilm.TabIndex = 48;
@@ -218,20 +284,25 @@ namespace coursework
             this.family.Text = "family";
             this.family.UseVisualStyleBackColor = true;
             // 
-            // year
+            // to_year
             // 
-            this.year.BackColor = System.Drawing.Color.LightGray;
-            this.year.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.year.Location = new System.Drawing.Point(131, 387);
-            this.year.Maximum = new decimal(new int[] {
+            this.to_year.BackColor = System.Drawing.Color.LightGray;
+            this.to_year.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.to_year.Location = new System.Drawing.Point(105, 437);
+            this.to_year.Maximum = new decimal(new int[] {
             2021,
             0,
             0,
             0});
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(46, 19);
-            this.year.TabIndex = 43;
-            this.year.Value = new decimal(new int[] {
+            this.to_year.Minimum = new decimal(new int[] {
+            1980,
+            0,
+            0,
+            0});
+            this.to_year.Name = "to_year";
+            this.to_year.Size = new System.Drawing.Size(46, 19);
+            this.to_year.TabIndex = 43;
+            this.to_year.Value = new decimal(new int[] {
             2020,
             0,
             0,
@@ -356,7 +427,7 @@ namespace coursework
             this.filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.filter.ForeColor = System.Drawing.Color.White;
-            this.filter.Location = new System.Drawing.Point(60, 428);
+            this.filter.Location = new System.Drawing.Point(55, 486);
             this.filter.Name = "filter";
             this.filter.Size = new System.Drawing.Size(78, 27);
             this.filter.TabIndex = 32;
@@ -464,13 +535,15 @@ namespace coursework
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(920, 700);
+            this.MinimumSize = new System.Drawing.Size(920, 700);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie tracker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.year)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.from_year)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.to_year)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -491,7 +564,7 @@ namespace coursework
         private System.Windows.Forms.RadioButton SouthKorea;
         private System.Windows.Forms.CheckBox history;
         private System.Windows.Forms.CheckBox family;
-        private System.Windows.Forms.NumericUpDown year;
+        private System.Windows.Forms.NumericUpDown to_year;
         private System.Windows.Forms.RadioButton GreatBritain;
         private System.Windows.Forms.RadioButton France;
         private System.Windows.Forms.RadioButton USA;
@@ -512,5 +585,9 @@ namespace coursework
         private System.Windows.Forms.ComboBox age_limit;
         private System.Windows.Forms.RadioButton Any;
         private System.Windows.Forms.RadioButton Japan;
+        private System.Windows.Forms.NumericUpDown from_year;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

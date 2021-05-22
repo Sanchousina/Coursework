@@ -28,7 +28,7 @@ namespace coursework
             title.Text = film.film_name;
             poster.Image = ConvertImg.Base64ToImage(film.poster);
             descriptionField.Text = film.description;
-            year.Text = film.year;
+            year.Text = film.year.ToString();
             country.Text = film.country;
             director.Text = film.director;
             genre.Text = film.genre;
@@ -61,7 +61,7 @@ namespace coursework
             title.Text = film.film_name;
             poster.Image = ConvertImg.Base64ToImage(film.poster);
             descriptionField.Text = film.description;
-            year.Text = film.year;
+            year.Text = film.year.ToString();
             country.Text = film.country;
             director.Text = film.director;
             genre.Text = film.genre;

@@ -53,12 +53,9 @@ namespace coursework
                 p.Size = new Size(60, 70);
                 p.Image = ConvertImg.Base64ToImage(films[i].poster);
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
-                /*p.Cursor = Cursors.Hand;
-                p.Click += Poster_Click1;*/
 
                 Label title = new Label();
                 title.Location = new Point(x + p.Width + 20, y + p.Height/2);
-                //title.Multiline = true;
                 title.AutoSize = true;
                 title.Text = films[i].film_name;
                 title.BackColor = favorites.BackColor;
@@ -121,12 +118,9 @@ namespace coursework
                 p.Size = new Size(60, 70);
                 p.Image = ConvertImg.Base64ToImage(films[i].poster);
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
-                /*p.Cursor = Cursors.Hand;
-                p.Click += Poster_Click1;*/
 
                 Label title = new Label();
                 title.Location = new Point(x + p.Width + 20, y);
-                //title.Multiline = true;
                 title.AutoSize = true;
                 title.Text = films[i].film_name;
                 title.BackColor = later.BackColor;
@@ -144,7 +138,7 @@ namespace coursework
                 delete.FlatAppearance.BorderSize = 0;
                 delete.ForeColor = Color.WhiteSmoke;
                 delete.BackColor = Color.FromArgb(209, 4, 4);
-                delete.Location = new Point(230, y + p.Height / 2);
+                delete.Location = new Point(230, y);
                 delete.Cursor = Cursors.Hand;
                 delete.Click += DeleteLater_Click;
 
