@@ -50,10 +50,10 @@ namespace coursework
             this.countryField = new System.Windows.Forms.TextBox();
             this.filmNameField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.add_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.saveChanges = new System.Windows.Forms.Button();
+            this.add_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.releaseYear)).BeginInit();
@@ -320,6 +320,33 @@ namespace coursework
             this.panel2.Size = new System.Drawing.Size(752, 50);
             this.panel2.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.saveChanges);
+            this.panel3.Controls.Add(this.add_button);
+            this.panel3.Location = new System.Drawing.Point(421, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(299, 38);
+            this.panel3.TabIndex = 1;
+            // 
+            // saveChanges
+            // 
+            this.saveChanges.AutoSize = true;
+            this.saveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
+            this.saveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveChanges.Dock = System.Windows.Forms.DockStyle.Right;
+            this.saveChanges.FlatAppearance.BorderSize = 0;
+            this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChanges.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveChanges.ForeColor = System.Drawing.Color.White;
+            this.saveChanges.Location = new System.Drawing.Point(47, 0);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(126, 38);
+            this.saveChanges.TabIndex = 5;
+            this.saveChanges.Text = "save changes";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
+            // 
             // add_button
             // 
             this.add_button.AutoSize = true;
@@ -349,39 +376,13 @@ namespace coursework
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin panel";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.saveChanges);
-            this.panel3.Controls.Add(this.add_button);
-            this.panel3.Location = new System.Drawing.Point(421, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(299, 38);
-            this.panel3.TabIndex = 1;
-            // 
-            // saveChanges
-            // 
-            this.saveChanges.AutoSize = true;
-            this.saveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.saveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveChanges.Dock = System.Windows.Forms.DockStyle.Right;
-            this.saveChanges.FlatAppearance.BorderSize = 0;
-            this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveChanges.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.saveChanges.ForeColor = System.Drawing.Color.White;
-            this.saveChanges.Location = new System.Drawing.Point(47, 0);
-            this.saveChanges.Name = "saveChanges";
-            this.saveChanges.Size = new System.Drawing.Size(126, 38);
-            this.saveChanges.TabIndex = 5;
-            this.saveChanges.Text = "save changes";
-            this.saveChanges.UseVisualStyleBackColor = false;
-            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
-            // 
             // Add_film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 514);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Add_film";
             this.Text = "Add_film";
             this.panel1.ResumeLayout(false);

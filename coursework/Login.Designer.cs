@@ -58,6 +58,7 @@ namespace coursework
             // registLink
             // 
             this.registLink.AutoSize = true;
+            this.registLink.LinkColor = System.Drawing.Color.WhiteSmoke;
             this.registLink.Location = new System.Drawing.Point(143, 302);
             this.registLink.Name = "registLink";
             this.registLink.Size = new System.Drawing.Size(149, 15);

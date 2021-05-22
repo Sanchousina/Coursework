@@ -39,7 +39,6 @@ namespace coursework
                 age_limit.Text = "18+";
                 if(user.age < 18)
                 {
-                    //link.Cursor = Cursors.No;     //почему не меняется?
                     link.Enabled = false;
                 }
             }

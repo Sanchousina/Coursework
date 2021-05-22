@@ -229,6 +229,7 @@ namespace coursework
             this.MaximizeBox = false;
             this.Name = "UserPage";
             this.Text = "UserPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserPage_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.block1.ResumeLayout(false);

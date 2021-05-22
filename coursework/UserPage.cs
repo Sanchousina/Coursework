@@ -103,6 +103,9 @@ namespace coursework
                     "Film is deleted",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+            favorites.Controls.Clear();
+            LoadFavorites(user.favorites);
         }
 
         private void LoadLaters(List<Film> films)
@@ -122,7 +125,7 @@ namespace coursework
                 p.Click += Poster_Click1;*/
 
                 Label title = new Label();
-                title.Location = new Point(x + p.Width + 20, y + p.Height / 2);
+                title.Location = new Point(x + p.Width + 20, y);
                 //title.Multiline = true;
                 title.AutoSize = true;
                 title.Text = films[i].film_name;
@@ -141,7 +144,7 @@ namespace coursework
                 delete.FlatAppearance.BorderSize = 0;
                 delete.ForeColor = Color.WhiteSmoke;
                 delete.BackColor = Color.FromArgb(209, 4, 4);
-                delete.Location = new Point(230, y);
+                delete.Location = new Point(230, y + p.Height / 2);
                 delete.Cursor = Cursors.Hand;
                 delete.Click += DeleteLater_Click;
 
@@ -168,6 +171,9 @@ namespace coursework
                     "Film is deleted",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+            later.Controls.Clear();
+            LoadLaters(user.laters);
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -175,6 +181,11 @@ namespace coursework
             this.Hide();
             main = new Main(user, admin);
             main.Show();
+        }
+
+        private void UserPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

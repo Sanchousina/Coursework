@@ -76,7 +76,7 @@ namespace coursework
                 if(x == 700)
                 {
                     x = 40;
-                    y = y + 200 + 60;
+                    y = y + 200 + 60 + 10;
                 }
                 p = new PictureBox();
                 p.Name = films[i].film_name;
@@ -99,8 +99,17 @@ namespace coursework
                 currentSize += 5;
                 title.Font = new Font(title.Font.Name, currentSize, title.Font.Unit);
 
+                Label info = new Label();
+                info.Location = new Point(x, y + p.Height + 40);
+                info.AutoSize = true;
+                info.Text = films[i].country + ", " + films[i].year + ", " + films[i].genre;
+                info.BackColor = catalog.BackColor;
+                info.BorderStyle = BorderStyle.None;
+                info.ForeColor = Color.WhiteSmoke;
+
                 catalog.Controls.Add(p);
                 catalog.Controls.Add(title);
+                catalog.Controls.Add(info);
 
                 x += p.Width+40;
             }
@@ -231,7 +240,7 @@ namespace coursework
             }
 
             bool limit = false;
-            if (age_limit.Text == "16+")
+            if (age_limit.Text == "18+")
             {
                 limit = true;
             }

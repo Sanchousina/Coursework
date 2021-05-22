@@ -128,7 +128,7 @@ namespace coursework
             this.age_limit.BackColor = System.Drawing.Color.LightGray;
             this.age_limit.FormattingEnabled = true;
             this.age_limit.Items.AddRange(new object[] {
-            "16+",
+            "18+",
             "none"});
             this.age_limit.Location = new System.Drawing.Point(18, 383);
             this.age_limit.Name = "age_limit";
@@ -466,7 +466,7 @@ namespace coursework
             this.MaximumSize = new System.Drawing.Size(920, 700);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Movie tracker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

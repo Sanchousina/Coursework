@@ -30,6 +30,7 @@ namespace coursework
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ageField = new System.Windows.Forms.NumericUpDown();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Regist = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,10 +44,9 @@ namespace coursework
             this.nameField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ageField = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ageField)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,10 +71,18 @@ namespace coursework
             this.panel1.Size = new System.Drawing.Size(476, 491);
             this.panel1.TabIndex = 0;
             // 
+            // ageField
+            // 
+            this.ageField.Location = new System.Drawing.Point(151, 279);
+            this.ageField.Name = "ageField";
+            this.ageField.Size = new System.Drawing.Size(36, 23);
+            this.ageField.TabIndex = 13;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel1.LinkColor = System.Drawing.Color.WhiteSmoke;
             this.linkLabel1.Location = new System.Drawing.Point(166, 424);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(136, 20);
@@ -208,13 +216,6 @@ namespace coursework
             this.label1.Text = "Registration";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ageField
-            // 
-            this.ageField.Location = new System.Drawing.Point(151, 279);
-            this.ageField.Name = "ageField";
-            this.ageField.Size = new System.Drawing.Size(36, 23);
-            this.ageField.TabIndex = 13;
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,8 +227,8 @@ namespace coursework
             this.Text = "Registration";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ageField)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
